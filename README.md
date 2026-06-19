@@ -55,7 +55,7 @@ desalineados.
 - **DNRPA** — Dirección Nacional de los Registros de la 
   Propiedad del Automotor
 - Portal: datos.gob.ar
-- Archivos utilizados: muestra de 6 meses seleccionados 
+- Archivos utilizados: muestra de 7 meses seleccionados 
   por criterio teórico (ver nota metodológica en notebooks)
 
 ---
@@ -67,7 +67,7 @@ desalineados.
 ![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange)
 
 - Python 3.11
-- Pandas / NumPy
+- Pandas / NumPy / SciPy
 - Matplotlib / Seaborn
 - Jupyter Notebook
 - VS Code + Miniconda
@@ -75,33 +75,61 @@ desalineados.
 ---
 
 ## Estructura del proyecto
+
 ├── data/
-│   ├── raw/          # Datos originales (no versionados)
-│   └── processed/    # Datos procesados
+
+│   ├── raw/              # Datos originales (no versionados)
+
+│   ├── raw_futuro/       # Archivos posteriores al cierre del análisis
+
+│   └── processed/        # Datos procesados
+
 ├── notebooks/
+
 │   ├── 01_exploracion.ipynb
-│   ├── 02_analisis_tendencias.ipynb
-│   ├── 03_modelo_akerlof.ipynb
+
+│   ├── 02_pipeline_temporal.ipynb
+
+│   ├── 03_Indice_Seleccion_Adversa.ipynb
+
 │   └── 04_conclusiones.ipynb
+
 ├── reports/
-│   └── figures/      # Visualizaciones exportadas
+
+│   └── figures/          # Visualizaciones exportadas
+
 ├── requirements.txt
+
+├── INFORME_EJECUTIVO.md
+
 └── README.md
 
 ---
 
 ## Nota metodológica
 
-El análisis utiliza una muestra de 6 archivos mensuales 
+El análisis utiliza una muestra de 7 archivos mensuales 
 seleccionados por criterio teórico, no una serie continua. 
 Las conclusiones son exploratorias. Ver detalle en 
 `notebooks/01_exploracion.ipynb`.
 
 ---
 
+## Hallazgo central
+
+> Cuando el mercado de autos nuevos baja de precio, el mercado 
+> de usados no se beneficia. Se vacía de calidad.
+
+El Índice de Selección Adversa (ISA) construido en este proyecto 
+confirma que **Marzo 2026 registra el mayor nivel de stress del 
+mercado en toda la serie analizada** — coincidiendo exactamente 
+con la crisis actual de sobrestock en el segmento 0km.
+
+---
+
 ## Estado del proyecto
 
-🔄 En desarrollo — Etapa 1: Exploración y diagnóstico
+✅ Completo — Ver `INFORME_EJECUTIVO.md` para resumen ejecutivo.
 
 ---
 
